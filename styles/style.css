@@ -1,0 +1,60 @@
+/* GENERAL */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    color: #fff;
+    font-size: 22px;
+    font-family: sans-serif;
+    background-color: #3c4352;
+}
+label{
+    cursor: pointer;
+}
+
+/* MAIN */
+.main-content{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* IMAGE */
+/* Load File */
+#file{
+    display: none;
+}
+
+.box{
+    margin: 30px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+#img{
+    display: block;
+    max-width: 500px;
+    max-height: 300px;
+}
+
+/* FILTERS */
+.filters{
+    display: flex;
+    text-align: center;
+}
+.filter{
+    margin: 0 20px;
+}
+input:not([type="file"]){
+    display: block;
+    margin-top: 10px;
+    opacity:0;
+    outline: none;
+}
+input:focus{
+    opacity: 1;
+}

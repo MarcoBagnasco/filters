@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filters</title>
+
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <main class="main-content">
+        <h1>Photos Modifier </h1>
+        <!-- Image -->
+        <input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)">
+        <div class="box">
+            <label for="file">
+                <img id="img" src="./img/uploadimage.jpg" alt="load image">
+            </label>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters">
+            <div class="filter">
+                <label for="gray">Grayscale</label>
+                <input class="slider" id="gray" oninput="graySet()" type="range" min="0" max="100" value="0">
+            </div>
+            <div class="filter">
+                <label for="saturate">Saturate</label>
+                <input id="saturate" oninput="saturateSet()" type="range" min="0" max="100" value="0">
+            </div>
+            <div class="filter">
+                <label for="sepia">Sepia</label>
+                <input id="sepia" oninput="sepiaSet()" type="range" min="0" max="100" value="0">
+            </div>
+            <div class="filter">
+                <label for="invert">Invert</label>
+                <input id="invert" oninput="invertSet()" type="range" min="0" max="100" value="0">
+            </div>
+            <div class="filter">
+                <label for="contrast">Contrast</label>
+                <input id="contrast" oninput="contrastSet()" type="range" min="0" max="100" value="0">
+            </div>
+            <div class="filter">
+                <label for="bright">Brightness</label>
+                <input id="bright" oninput="brightSet()" type="range" min="0" max="100" value="0">
+            </div>
+            <div class="filter">
+                <label for="blur">Blur</label>
+                <input id="blur" oninput="blurSet()" type="number" min="0" max="50" value="0">
+            </div>
+            <div class="filter">
+                <label for="hue-rot">Hue Rotation</label>
+                <input id="hue-rot" oninput="hueRotSet()" type="number" min="0" max="360" value="0">
+            </div>
+        </div>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
